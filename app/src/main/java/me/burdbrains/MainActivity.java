@@ -3,6 +3,7 @@ package me.burdbrains;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Notification;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         final Button bkgColor = findViewById(R.id.backgroundColor);
 
+        final Button notifcBut = findViewById(R.id.notification);
+
         final ConstraintLayout appLayout = findViewById(R.id.appLayout);
 
         butColor.setOnClickListener(new View.OnClickListener()
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 butColor.setBackgroundColor(rainbow[colorInd]);
                 bkgColor.setBackgroundColor(rainbow[colorInd]);
+                notifcBut.setBackgroundColor(rainbow[colorInd]);
 
                 colorInd = cycleColor(colorInd);
             }
@@ -72,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
                 appLayout.setBackgroundColor(rainbow[colorInd]);
 
                 colorInd = cycleColor(colorInd);
+            }
+        });
+
+        notifcBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Notification notify = new NotificationCompat.Builder;
             }
         });
     }
