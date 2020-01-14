@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Defining the colors for the button to change
         int red = Color.parseColor("#FF0000");
         int ora = Color.parseColor("#FF7F00");
         int yel = Color.parseColor("#FFFF00");
@@ -41,14 +42,20 @@ public class MainActivity extends AppCompatActivity {
 
         final int[] rainbow = {red, ora, yel, gre, blu, ind, vio};
 
+
+        // Defining the button variables
         final Button butColor = findViewById(R.id.buttonColor);
 
         final Button bkgColor = findViewById(R.id.backgroundColor);
 
         final Button notifcBut = findViewById(R.id.notification);
 
+
+        // Defining the layout (bkg) so .background functions color can be changed
         final ConstraintLayout appLayout = findViewById(R.id.appLayout);
 
+
+        // Button1 listener (to change button colors)
         butColor.setOnClickListener(new View.OnClickListener()
         {
             int colorInd = 0;
@@ -66,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // Button2 listener (to change background color)
         bkgColor.setOnClickListener(new View.OnClickListener()
         {
             int colorInd = 0;
@@ -79,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // Button3 listener (to send a test notification)
         notifcBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
