@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ButtonTest</string>
+    <string name="button1_text">Button Color</string>
+    <string name="button2_text">Background Color</string>
+    <string name="button3_text">Notification</string>
+</resources>
